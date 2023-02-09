@@ -1,16 +1,14 @@
 import React from "react";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 type Props = {};
 
 const OurStory = (props: Props) => {
   return (
-    <>
-      <Navbar />
-      <div className="h-screen flex justify-center bg-regal-blue">
-        <h1>Hello to Our Story Page</h1>
-      </div>
-    </>
+    <div>
+      <h2>Hello</h2>
+    </div>
   );
 };
 

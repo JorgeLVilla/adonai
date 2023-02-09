@@ -3,48 +3,56 @@ import Link from "next/link";
 import Image from "next/image";
 import FBIcon from "../assets/facebook.png";
 import InstaIcon from "../assets/instagram.png";
+import HamMenu from "../assets/HamMenu.png";
 
 type Props = {};
 
 const Navbar = (props: Props) => {
   return (
-    <nav className=" bg-regal-blue py-5 px-3 text-off-white">
-      <div className="flex justify-around space-between my-2 py-2">
-        {/*Logo*/}
-        <div className="mx-2 flex items-center ">
+    <nav className="text-off-white h-screen flex justify-center items-center absolute top-0 right-0 left-0 bg-regal-blue z-10">
+      <div className="h-4/5 flex-col ">
+        {/*Ham Menu-----------*/}
+        <div className="text-center w-screen mr-10 px-5 justify-end items-center flex lg:hidden">
+          <Image src={HamMenu} alt="Ham menu" className="" />
+        </div>
+
+        {/*Logo-----------------*/}
+        <div className="text-center h-1/4 flex justify-center items-center">
           <Link href="/">
-            <span>LOGO</span>
+            <div className="text-4xl">LOGO</div>
           </Link>
         </div>
 
         {/*Middle Links*/}
-        <div className="flex justify-between items-center ">
-          <span className="mx-2 p-2">
+        <div className="text-center">
+          <div className="my-3">
             <Link href="/TheMission">
-              <span>THE MISSION</span>
+              <span className="text-3xl">THE MISSION</span>
             </Link>
-          </span>
+          </div>
 
-          <span className="mx-2 p-2">
+          <div className="my-3">
             <Link href="/OurStory">
-              <span>OUR STORY</span>
+              <span className="text-3xl">OUR STORY</span>
             </Link>
-          </span>
+          </div>
 
-          <span className="mx-2 p-2">
+          <div className="my-3">
             <Link href="/Contact">
-              <span>CONTACT</span>
+              <span className="text-3xl">CONTACT</span>
             </Link>
-          </span>
-          <span className="mx-2 p-2 border-r-2 pr-5">
+          </div>
+
+          <div className="my-3">
             <Link href="/Give">
-              <span>GIVE</span>
+              <span className="text-3xl">GIVE</span>
             </Link>
-          </span>
-          <span className="mx-2 p-2">ESPANOL</span>
+          </div>
+
+          <div className="text-3xl pt-5 my-5 text-yellow-500">ESPANOL</div>
         </div>
         {/*Social Icons*/}
-        <div className="flex ">
+        <div className="flex justify-center mt-10">
           <Image src={FBIcon} alt="Facebook Icon" className="mx-2" />
           <Image src={InstaIcon} alt="Instagram Icon" className="mx-2" />
         </div>
