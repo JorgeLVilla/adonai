@@ -5,13 +5,12 @@ import styles from "@/styles/Home.module.css";
 import Link from "next/link";
 
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 import Hero from "./Hero";
 import TheMission from "./TheMission";
 import OurStory from "./OurStory";
 import Contact from "./Contact";
 import Give from "./Give";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
@@ -22,13 +21,10 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="bg-regal-blue">
-        <Navbar />
 
-        <section>
-          <Hero />
-        </section>
-      </div>
+      <Navbar />
+      <Hero />
+      <Footer />
     </>
   );
 }
