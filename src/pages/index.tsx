@@ -3,14 +3,7 @@ import Image from "next/image";
 import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
 import Link from "next/link";
-
-import Navbar from "./Navbar";
-import Footer from "./Footer";
 import Hero from "./Hero";
-import TheMission from "./TheMission";
-import OurStory from "./OurStory";
-import Contact from "./Contact";
-import Give from "./Give";
 
 export default function Home() {
   return (
@@ -21,10 +14,9 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <Navbar />
-      <Hero />
-      <Footer />
+      <div className="bg-regal-blue">
+        <Hero />
+      </div>
     </>
   );
 }

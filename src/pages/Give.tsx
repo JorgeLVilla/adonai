@@ -6,7 +6,6 @@ type Props = {};
 const Give = (props: Props) => {
   return (
     <>
-      <Navbar />
       <div className="h-screen flex justify-center bg-regal-blue">
         <h1>Give</h1>
       </div>
