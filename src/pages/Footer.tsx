@@ -4,7 +4,7 @@ type Props = {};
 
 const Footer = (props: Props) => {
   return (
-    <>
+    <div className="bg-regal-blue">
       <div className="h-10 w-4/5 text-off-white white mx-auto">
         <hr />
       </div>
@@ -17,7 +17,7 @@ const Footer = (props: Props) => {
           hello@<br></br>sdadonai.com
         </h1>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -6,19 +6,12 @@ import HamMenu from "../assets/HamMenu.png";
 
 type Props = {};
 const welcomeHome = ["WELCOME HOME", "WELCOME HOME"];
+
 const Hero = (props: Props) => {
   return (
     <div className="w-full">
-      <div className="flex">
-        <div className=" text-white text-center w-3/6">LOGO</div>
-        {/*Ham Menu-----------*/}
-        <div className="text-center w-screen mr-10 px-5 flex justify-end items-center">
-          <Image src={HamMenu} alt="Ham menu" />
-        </div>
-      </div>
-
       {/*sideways moving text--------------*/}
-      <div className="bg-regal-blue text-xl flex justify-center text-off-white my-5 w-full">
+      <div className="bg-regal-blue text-xl flex justify-center text-off-white py-5 w-full">
         {welcomeHome.map((item) => (
           <h1 className="mx-2">{item}</h1>
         ))}
@@ -52,12 +45,12 @@ const Hero = (props: Props) => {
             </p>
           </div>
         </div>
-        <div className="my-5 py-2">
+        <div className=" py-5">
           <h1 className="text-3xl text-off-white text-center">
             GET IN TOUCH<br></br>WITH US
           </h1>
           {/*yellow circle arrow container--------------*/}
-          <div className="w-9 mx-auto my-3">
+          <div className="w-9 mx-auto mt-3">
             <Image
               src={ArrowCircleIcon}
               alt="arrow on yellow circle"

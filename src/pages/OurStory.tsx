@@ -7,7 +7,7 @@ type Props = {};
 const OurStory = (props: Props) => {
   return (
     <div>
-      <h2>Hello</h2>
+      <h2>Our Story</h2>
     </div>
   );
 };
