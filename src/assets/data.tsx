@@ -1,22 +1,9 @@
-export const NAV__LINKS = [
-  {
-    path: "TheMission",
-    display: "THE MISSION",
-    spanish: "La mision",
+export const data = {
+  ourStory: {
+    title: "Adonai Family",
+    storyTitle: "Who We Are",
+    storyDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    getToKnow: "Get to know us",
   },
-  {
-    path: "OurStory",
-    display: "OUR STORY",
-    spanish: "Nuestra historia",
-  },
-  {
-    path: "Contact",
-    display: "CONTACT",
-    spanish: "Informacion",
-  },
-  {
-    path: "Give",
-    display: "GIVE",
-    spanish: "Ofrenda",
-  },
-];
+};

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
-import { NAV__LINKS } from "@/assets/data";
+import { NAV__LINKS } from "@/assets/navData";
 import {
   AiOutlineMenu,
   AiOutlineClose,
