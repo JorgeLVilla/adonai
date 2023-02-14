@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Link from "next/link";
-import { NAV__LINKS } from "@/assets/navData";
+import { NAV__LINKS } from "@/assets/contentData/navData";
 import {
   AiOutlineMenu,
   AiOutlineClose,

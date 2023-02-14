@@ -1,5 +1,5 @@
 import React from "react";
-import { data } from "../assets/data";
+import { data } from "../assets/contentData/data";
 import Image from "next/image";
 import randomPeople from "../assets/randomPeople.png";
 import Couple from "../assets/couple.jpg";
@@ -29,7 +29,7 @@ const OurStory = (props: Props) => {
       {/*Get to know us container-------------*/}
       <div className="py-5">
         <h1 className="text-3xl text-off-white text-center">
-          GET IN TOUCH<br></br>WITH US
+          {data.ourStory.getToKnow}
         </h1>
         {/*yellow circle arrow container--------------*/}
         <div className="w-9 mx-auto mt-3">

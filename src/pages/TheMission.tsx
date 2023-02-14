@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import { BELIEF_LIST } from "@/assets/beliefs";
-import { data } from "../assets/data";
+import { BELIEF_LIST } from "@/assets/contentData/beliefs";
+import { data } from "../assets/contentData/data";
 import randomPeople from "../assets/randomPeople.png";
 
 type Props = {};
