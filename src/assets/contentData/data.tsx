@@ -1,4 +1,13 @@
 export const data = {
+  hero: {
+    title: "Welcome Home",
+    locationTitle: "Location",
+    locationDesc: "84 Kingswood Dr, San Diego CA 92139",
+    hoursTitle: "Hours",
+    thursTime: "Thursdays at 7pm",
+    sunTime: "Sundays at 1pm",
+    contact: "get in touch with us",
+  },
   ourStory: {
     title: "Adonai Family",
     storyTitle: "Who We Are",
@@ -13,7 +22,18 @@ export const data = {
     title: "Generosity",
     bodyTitle: "Thank you for giving",
     bodyDesc:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation i officia deserunt mollit anim id est laborum.",
     givelify: "Give here",
+  },
+  contact: {
+    welcomeHome: "welcome home",
+    mapTitle: "Join us for church!",
+    locationTitle: "Location",
+    locationDesc: "84 Kingswood Dr, San Diego CA 92139",
+    hoursTitle: "Hours",
+    thursTime: "Thursdays at 7pm",
+    sunTime: "Sundays at 1pm",
+    contact: "get in touch with us",
+    follow: "Follow Adonai",
   },
 };

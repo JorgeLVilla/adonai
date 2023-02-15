@@ -1,6 +1,6 @@
 import React from "react";
-import Navbar from "./Navbar";
 import { AiOutlineFacebook, AiOutlineInstagram } from "react-icons/ai";
+import { data } from "../assets/contentData/data";
 
 type Props = {};
 const welcomeHome = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -11,13 +11,15 @@ const Contact = (props: Props) => {
       <div className="h-auto lg:h-screen w-full flex flex-col bg-regal-blue  ">
         <div className="bg-regal-blue text-xl flex gap-7 justify-center text-off-white py-5 w-full overflow-hidden">
           {welcomeHome.map((item) => (
-            <h1 className="mx-2 text-2xl uppercase">welcome -</h1>
+            <h1 className="mx-2 text-2xl uppercase">
+              {data.contact.welcomeHome}
+            </h1>
           ))}
         </div>
         <div className="mx-auto w-full flex flex-col justify-center items-center lg:justify-evenly lg:flex-row">
           <div className=" lg:w-[40%]">
             <h1 className=" lg:leading-snug mx-auto lg:max-w-[600px] mb-6 text-center text-4xl tracking-wider font-semibold uppercase text-off-white lg:text-7xl">
-              join us for church!
+              {data.contact.mapTitle}
             </h1>
             <div className=" w-full px-2">
               <iframe
@@ -31,23 +33,23 @@ const Contact = (props: Props) => {
             <div className="">
               <h3 className="text-yellow-400 text-xl sm:text-4xl uppercase mb-10 font-semibold">
                 {" "}
-                location
+                {data.contact.locationTitle}
               </h3>
-              <p className="font-thin">84 Kingswood Dr.</p>
+              <p className="font-thin">84 Kingswood Dr</p>
               <p className="font-thin">San Diego, Ca. 91911</p>
             </div>
             <div className="mt-10">
               <h3 className="text-yellow-400 text-xl sm:text-4xl uppercase mb-10 font-semibold">
                 {" "}
-                Hours
+                {data.contact.hoursTitle}
               </h3>
-              <p className="font-thin">Thursday at 7pm</p>
-              <p className="font-thin">Sundays at 8pm</p>
+              <p className="font-thin">{data.contact.thursTime}</p>
+              <p className="font-thin">{data.contact.sunTime}</p>
             </div>
             <div className="mt-10">
               <h3 className="text-yellow-400 text-xl sm:text-4xl uppercase mb-10 font-semibold">
                 {" "}
-                follow adonai
+                {data.contact.follow}
               </h3>
               <div className="flex items-center justify-center text-xl sm:text-5xl">
                 <AiOutlineInstagram />
