@@ -4,9 +4,11 @@ import { BELIEF_LIST } from "@/assets/contentData/beliefs";
 import { data } from "../assets/contentData/data";
 import randomPeople from "../assets/randomPeople.png";
 
-type Props = {};
+type Props = {
+  translate: boolean
+};
 
-const TheMission = (props: Props) => {
+const TheMission = ({translate}: Props) => {
   return (
     <div className="bg-regal-blue text-off-white text-center">
       <div>
@@ -15,8 +17,8 @@ const TheMission = (props: Props) => {
       <ul className="py-5 my-5">
         {BELIEF_LIST.map((item, index) => (
           <li key={index} className="">
-            <div>{item.headline}</div>
-            <div>{item.desc}</div>
+            <div>{translate ? item.spanishTitle : item.headline}</div>
+            <div>{translate ? item.spanishDesc : item.desc}</div>
             <div className="h-10 w-4/5 text-yellow-500 white mx-auto py-6">
               <hr />
             </div>
