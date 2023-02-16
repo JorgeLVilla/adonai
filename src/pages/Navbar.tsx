@@ -8,13 +8,20 @@ import {
   AiOutlineInstagram,
 } from "react-icons/ai";
 
-type Props = {};
+type Props = {
+  translate: boolean;
+  setTranslate: any;
+};
 
-const Navbar = (props: Props) => {
+const Navbar = ({ translate, setTranslate }: Props) => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   const handleNavbar = () => {
     setNavbarOpen(!navbarOpen);
+  };
+
+  const handleTranslate = () => {
+    setTranslate(!translate);
   };
 
   return (
@@ -44,18 +51,26 @@ const Navbar = (props: Props) => {
         </div>
 
         <div>
-          <ul className="text-center text-3xl">
+          <ul className="text-center text-3xl uppercase">
             {NAV__LINKS.map((item, index) => (
               <li
                 onClick={handleNavbar}
                 key={index}
                 className="px-8 text-off-white my-3"
               >
-                <Link href={`${item.path}`}>{item.display}</Link>
+                <Link href={`${item.path}`}>
+                  {translate ? item.spanish : item.display}
+                </Link>
               </li>
             ))}
-            <div onClick={handleNavbar} className="my-3 py-2">
-              ESPANOL
+            <div
+              onClick={() => {
+                setNavbarOpen(!navbarOpen);
+                setTranslate(!translate);
+              }}
+              className="my-3 py-2"
+            >
+              {translate ? "english" : "español"}
             </div>
           </ul>
         </div>
@@ -76,12 +91,20 @@ const Navbar = (props: Props) => {
         </div>
 
         <div className="hidden sm:flex">
-          <ul className="flex">
+          <ul className="flex items-center text-off-white uppercase">
             {NAV__LINKS.map((item, index) => (
               <li key={index} className="px-8 text-off-white">
-                <Link href={`${item.path}`}>{item.display}</Link>
+                <Link href={`${item.path}`}>
+                  {translate ? item.spanish : item.display}
+                </Link>
               </li>
             ))}
+            <div
+              onClick={handleTranslate}
+              className="my-3 border-l border-off-white py-2 px-8 uppercase cursor-pointer"
+            >
+              {translate ? "English" : "Español"}
+            </div>
           </ul>
         </div>
 
