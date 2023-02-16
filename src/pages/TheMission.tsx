@@ -5,10 +5,10 @@ import { data } from "../assets/contentData/data";
 import randomPeople from "../assets/randomPeople.png";
 
 type Props = {
-  translate: boolean
+  translate: boolean;
 };
 
-const TheMission = ({translate}: Props) => {
+const TheMission = ({ translate }: Props) => {
   return (
     <div className="bg-regal-blue text-off-white text-center">
       <div>

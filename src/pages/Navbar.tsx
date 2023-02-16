@@ -7,6 +7,7 @@ import {
   AiOutlineFacebook,
   AiOutlineInstagram,
 } from "react-icons/ai";
+import { GrFacebookOption, GrInstagram } from "react-icons/gr";
 
 type Props = {
   translate: boolean;
@@ -30,60 +31,61 @@ const Navbar = ({ translate, setTranslate }: Props) => {
       <div
         className={` ${
           navbarOpen ? "flex" : "hidden"
-        } flex-col absolute bottom-0 top-0 right-0 left-0 sm:hidden text-off-white h-screen flex justify-center bg-regal-blue
-          duration-500
+        } bg-regal-blue flex-col absolute bottom-0 top-0 right-0 left-0 sm:hidden text-off-white h-screen flex justify-center duration-500
         `}
       >
-        <div
-          onClick={handleNavbar}
-          className="text-center w-screen items-center px-20 mb-5 flex justify-end"
-        >
-          <AiOutlineClose className="text-3xl" />
-        </div>
+        <section className="h-4/5 py-10">
+          <div
+            onClick={handleNavbar}
+            className="text-center w-screen items-center px-20 flex justify-end "
+          >
+            <AiOutlineClose className="text-3xl" />
+          </div>
 
-        <div
-          onClick={handleNavbar}
-          className="text-center text-3xl h-1/6 flex justify-center items-center"
-        >
-          <Link href="/">
-            <div>LOGO</div>
-          </Link>
-        </div>
+          <div
+            onClick={handleNavbar}
+            className="text-center text-3xl h-1/6 flex justify-center items-center"
+          >
+            <Link href="/">
+              <div>LOGO</div>
+            </Link>
+          </div>
 
-        <div>
-          <ul className="text-center text-3xl uppercase">
-            {NAV__LINKS.map((item, index) => (
-              <li
-                onClick={handleNavbar}
-                key={index}
-                className="px-8 text-off-white my-3"
+          <div>
+            <ul className="text-center text-3xl uppercase">
+              {NAV__LINKS.map((item, index) => (
+                <li
+                  onClick={handleNavbar}
+                  key={index}
+                  className="px-8 text-off-white my-3"
+                >
+                  <Link href={`${item.path}`}>
+                    {translate ? item.spanish : item.display}
+                  </Link>
+                </li>
+              ))}
+              <div
+                onClick={() => {
+                  setNavbarOpen(!navbarOpen);
+                  setTranslate(!translate);
+                }}
+                className="my-3 py-2"
               >
-                <Link href={`${item.path}`}>
-                  {translate ? item.spanish : item.display}
-                </Link>
-              </li>
-            ))}
-            <div
-              onClick={() => {
-                setNavbarOpen(!navbarOpen);
-                setTranslate(!translate);
-              }}
-              className="my-3 py-2"
-            >
-              {translate ? "english" : "español"}
-            </div>
-          </ul>
-        </div>
+                {translate ? "english" : "español"}
+              </div>
+            </ul>
+          </div>
 
-        <div className="flex justify-center my-8 text-3xl text-off-white">
-          <AiOutlineFacebook className="mx-2" />
-          <AiOutlineInstagram className="mx-2" />
-        </div>
+          <div className="flex justify-center my-8 text-3xl text-off-white">
+            <GrInstagram className="mx-2" />
+            <GrFacebookOption className="mx-2" />
+          </div>
+        </section>
       </div>
       {/* ---------------End of Mobile Menu */}
 
       {/* ---------------Start of Desktop Menu */}
-      <div className=" flex w-full justify-between lg:justify-around items-center px-4">
+      <div className="flex w-full justify-between lg:justify-around items-center px-5 py-5">
         <div className="">
           <Link href="/">
             <div className="text-3xl text-off-white">LOGO</div>
@@ -109,8 +111,8 @@ const Navbar = ({ translate, setTranslate }: Props) => {
         </div>
 
         <div className="hidden sm:flex justify-center my-8 text-3xl text-white">
-          <AiOutlineFacebook className="mx-2" />
-          <AiOutlineInstagram className="mx-2" />
+          <GrInstagram className="mx-2" />
+          <GrFacebookOption className="mx-2" />
         </div>
 
         <div
