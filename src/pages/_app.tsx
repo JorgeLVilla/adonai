@@ -9,8 +9,8 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <div className="bg-regal-blue">
-      <Navbar translate={translate} setTranslate={setTranslate}/>
-      <Component {...pageProps}  translate={translate}/>
+      <Navbar translate={translate} setTranslate={setTranslate} />
+      <Component {...pageProps} translate={translate} />
       <Footer />
     </div>
   );
