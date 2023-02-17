@@ -31,7 +31,7 @@ const Navbar = ({ translate, setTranslate }: Props) => {
       <div
         className={` ${
           navbarOpen ? "flex" : "hidden"
-        } bg-regal-blue flex-col absolute bottom-0 top-0 right-0 left-0 sm:hidden text-off-white h-screen flex justify-center duration-500
+        } bg-regal-blue flex-col fixed w-full bottom-0 top-0 right-0 left-0 sm:hidden text-off-white h-screen flex justify-center duration-500
         `}
       >
         <section className="h-4/5 py-10">
